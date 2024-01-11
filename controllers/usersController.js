@@ -14,7 +14,7 @@ const signUp = async (req, res) => {
 
     const data = await Users.createAccount(username, password);
 
-    return res.status(200);
+    return res.json("Account created!");
 }
 
 module.exports = {
