@@ -6,7 +6,7 @@ class Users {
     }
 
     static getAccountName(username) {
-        return pool.query('SELECT username FROM users WHERE username = $1', [username]);
+        return pool.query('SELECT username, password FROM users WHERE username = $1', [username]);
     }
 }
 
