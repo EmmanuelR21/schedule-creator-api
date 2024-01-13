@@ -16,6 +16,15 @@ const signUpSchema = Joi.object({
     })
 })
 
+const loginSchema = Joi.object({
+    username: Joi.string().min(8).messages({
+        "string.min": "Please provide a valid Username",
+    }),
+    password: Joi.string().min(10).messages({
+        "string.min": "Please provide a valid password"
+    })
+})
 module.exports = {
-    signUpSchema
+    signUpSchema,
+    loginSchema
 }
